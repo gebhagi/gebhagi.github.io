@@ -1,0 +1,231 @@
+
+ 
+/* Imports */
+@import url("reset.css");
+ 
+/* HTML5 tags */
+header, section, footer, nav, article, figure {
+  display: block;
+}
+/*---- Global ----*/
+  /* Body */
+  body {
+    background: #97D287;
+    color: #000015;
+    text-align: left;
+    line-height: 1.429;  /* Line Spacing */
+    margin: 0;
+    padding: 0;
+    font-size: 65%; /* Base font size: 14px */
+    font-family: 'Times New Roman', 'Times New Roman', 'Times New Roman', 'Times New Roman', 'Times New Roman', 'Times New Roman', 'Times New Roman';
+  }
+ 
+  /* Headings */
+  h1 {font-size: 48px; line-height: .5;}
+  h2 {font-size: 22px}  
+  h3 {font-size: 20px}  
+  h4 {font-size: 18px} 
+  h5 {font-size: 14px}
+ 
+  h2, h3, h4 {
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: .8em;
+  }
+ 
+  /* Paragraphs */
+  p {margin-bottom: 1.143em;}
+ 
+  /*---- Footer ----*/
+  footer {
+    padding: 20px;
+    text-align: right;
+  }
+ 
+  /*---- Layout ----*/
+  .bodygroup {
+    clear: both;
+    margin: 0 auto;
+    width: 800px;
+  }
+  figure {float: right; margin: -.8em 0 2em 2em;}
+  figure2{float: left; margin: -.8em 0 2em 2em;}
+   
+  
+  /*---- banner ----*/
+  #banner {
+    margin: 0 auto;
+    padding: 2.5em 0 0 0;
+  }
+  #banner h1 a:link, #banner h1 a:visited {
+    color: #000305;
+    display: block;
+    font-weight: bold;
+    margin: 0 0 .6em .2em;
+    text-decoration: none;
+    width: 600px;
+  }
+  #banner h1 a:hover, #banner h1 a:active {
+    background: none;
+    color: #f6142a;
+    text-shadow: none;
+  }
+  #banner h1 strong {font-size: 0.36em; font-weight: normal;}
+  
+    /* nav */
+  #banner nav {
+    background: #191970;
+    font-size: 1.143em;
+    height: 40px;
+    line-height: 30px;
+    margin: 4em 0 2em 0;
+    padding: 0;
+    text-align: center;
+    width: 800px;
+  }
+  #banner nav ul {list-style: none; width: 800px; }
+  #banner nav li {float: left; display: inline; margin: 0;}
+  #banner nav a:link, #banner nav a:visited {
+    color: #e5e5e5;
+    display: inline-block;
+    height: 30px;
+    padding: 5px 1.5em;
+    text-decoration: none;
+  }
+  #banner nav a:active, #banner nav .active a:link, #banner nav .active a:visited {
+    background: #4682B4;
+    color: #999999;
+    text-shadow: none !important;
+  }
+  #banner nav a:hover {
+    background: #6B9BC3;
+    color: #999999;
+    text-shadow: none !important;
+  }
+  /*---- content -----*/
+  /* section */
+   #first, #second, #third, #fourth {
+    background: #fff;
+    margin-bottom: 2em;
+    overflow: hidden;
+    padding: 20px 20px;
+    width: 760px;
+  }
+   #first h2, #second h2, #third h2, #fourth h2 {color: #4682B4; font-size: 1.714em; margin-bottom: 0.333em;}
+  #first h3, #second h3, #third h3, #fourth h3 {font-size: 1.429em; margin-bottom: .5em;}
+  #third, #fourth { height: 600px; }
+ 
+/*---- menu activation -----*/
+  .hidediv {
+    display: none;
+  }
+  .showdiv {
+    display: block;
+  }
+  
+  /*---- openlayers controls -----*/
+  div.olControlZoom {
+    left: auto !important;
+    right: 10px !important;
+    top: 5px;
+  }
+  
+ 
+  
+ * {box-sizing:border-box}
+.mySlides {display:none;}
+.block {
+    display:block;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #224715;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #224715;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #rbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #017171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+} 
+  
+  
+  
+  
