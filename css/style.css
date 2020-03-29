@@ -10,13 +10,13 @@ header, section, footer, nav, article, figure {
 /*---- Global ----*/
   /* Body */
   body {
-    background: #97D287;
-    color: #000015;
+    background: #ADD8E6;
+    color: #000305;
     text-align: left;
     line-height: 1.429;  /* Line Spacing */
     margin: 0;
     padding: 0;
-    font-size: 65%; /* Base font size: 14px */
+    font-size: 87.5%; /* Base font size: 14px */
     font-family: 'Times New Roman', 'Times New Roman', 'Times New Roman', 'Times New Roman', 'Times New Roman', 'Times New Roman', 'Times New Roman';
   }
  
@@ -67,7 +67,7 @@ header, section, footer, nav, article, figure {
   }
   #banner h1 a:hover, #banner h1 a:active {
     background: none;
-    color: #f6142a;
+    color: #C74350;
     text-shadow: none;
   }
   #banner h1 strong {font-size: 0.36em; font-weight: normal;}
@@ -86,7 +86,7 @@ header, section, footer, nav, article, figure {
   #banner nav ul {list-style: none; width: 800px; }
   #banner nav li {float: left; display: inline; margin: 0;}
   #banner nav a:link, #banner nav a:visited {
-    color: #e5e5e5;
+    color: #fff;
     display: inline-block;
     height: 30px;
     padding: 5px 1.5em;
@@ -94,12 +94,12 @@ header, section, footer, nav, article, figure {
   }
   #banner nav a:active, #banner nav .active a:link, #banner nav .active a:visited {
     background: #4682B4;
-    color: #999999;
+    color: #fff;
     text-shadow: none !important;
   }
   #banner nav a:hover {
     background: #6B9BC3;
-    color: #999999;
+    color: #fff;
     text-shadow: none !important;
   }
   /*---- content -----*/
@@ -130,7 +130,17 @@ header, section, footer, nav, article, figure {
     top: 5px;
   }
   
- 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
  * {box-sizing:border-box}
 .mySlides {display:none;}
@@ -198,14 +208,14 @@ header, section, footer, nav, article, figure {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #rbb;
+  background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #017171;
+  background-color: #717171;
 }
 
 /* Fading animation */

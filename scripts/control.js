@@ -1,6 +1,6 @@
 /*
   Name: control.js
-  Date: March 2020
+  Date: April/May 2020
   Description: Functions of the simple webpage page.
   Version: 1.0
 */
@@ -20,7 +20,7 @@ Ext.onReady(function() {
   var wgs = new OpenLayers.Projection("EPSG:4326");  //WGS84
  
   // Bounding box oordinates for your chosen country Nepal & The World
-  var ctryBbox = new OpenLayers.Bounds(80.000000000,26.0000000,88.3000000,30.500000000).transform(wgs, sm);
+  var ctryBbox = new OpenLayers.Bounds(80.0177154541016,26.327468872070388,88.2422409057617,30.4679260253906).transform(wgs, sm);
   var worldExtent = new OpenLayers.Bounds(-185, -89, 185, 89).transform(wgs, sm);
  
   // Map definition
@@ -55,7 +55,7 @@ Ext.onReady(function() {
  
    
   beLayer = new OpenLayers.Layer.WMS(
-    'National Boundary', baseWmsUrl + '&map.layer[country_border].class[0].style[0]=COLOR+50+50+50',
+    'Nepal', baseWmsUrl + '&map.layer[country_border].class[0].style[0]=COLOR+50+220+50',
     {
       layers: 'country_border',
       transparent : true,
@@ -85,15 +85,15 @@ Ext.onReady(function() {
 	  map: theMap,
     extent: ctryBbox,
     region:'center',
-    margins: '7 7 7 0'
+    margins: '5 5 5 0'
   });
  
   //-- Layer switcher
   var treePanel = new Ext.tree.TreePanel({
     title: 'Table of Contents',
     region:'west',
-    margins: '7 0 7 7',
-    cmargins: '7 7 7 7',
+    margins: '5 0 5 5',
+    cmargins: '5 5 5 5',
     width: 175,
     minSize: 100,
     maxSize: 200,
@@ -104,7 +104,7 @@ Ext.onReady(function() {
     root: new Ext.tree.AsyncTreeNode({
         expanded: true,
         children: [
-          new GeoExt.tree.BaseLayerContainer({ text: 'Base Map', expanded: true }),
+          new GeoExt.tree.BaseLayerContainer({ text: 'Base Layers', expanded: true }),
           new GeoExt.tree.OverlayLayerContainer({ expanded: true })
         ]
     })
@@ -114,7 +114,7 @@ Ext.onReady(function() {
   new Ext.Panel({
     renderTo: "viewer-panel",
     height: 500,
-    width: 1000,
+    width: 760,
     layout: 'border',
     items:[ mapPanel, treePanel ]
   });
